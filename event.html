@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Листинг 8.7</title>
+    <script type="text/javascript">
+        document.onmousemove = function (evt) {
+            var d = document.getElementsByTagName("div")[0];
+            var txt = "<b>Координаты курсора мыши</b><br/>";
+            txt +="Горизонтальная координата: <b>"+evt.clientX+"</b><br/>";
+            txt +="Вертикальная координата: &nbsp&nbsp&nbsp<b>"+evt.clientY+"</b>";
+            d.innerHTML=txt;
+        }
+    </script>
+</head>
+<body>
+<div style="width: 280px;height: 80px;border-style: outset;font-size: 15px;padding: 10px;background-color: #f5f5f5;"><b>Координаты курсора мыши</b></div>
+<br/>
+    <a href="index.html">На главную</a><br/>
+    <a href="draw.html">Перейти  к рисованию</a><br/>
+    <a href="enot.html">Перейти  к описанию зверей</a><br/>
+    <a href="dispatch.html">Перейти к диспетчеризации</a><br/>
+    <a href="calculator.html"><b>КАЛЬКУЛЯТОР</b></a><br/>
+    <a href="koha.html">Перейти к кривой Коха</a><br/>
+    <a href="vers.html">Перейти к стихам А. С. Пушкина</a><br/>
+    <a href="images.html">Перейти к изображению</a><br/>
+    <a href="watches.html">Перейти к аналоговым часам</a><br/>
+    <a href="keyLogger.html">Перейти к keyLogger</a><br/>
+</body>
+</html>

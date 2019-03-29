@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Листинг 9.3</title>
+    <script type="text/javascript">
+        var txt = "О сколько нам открытий чудных<br/>";
+        txt += "Готовят просвещения дух<br/>";
+        txt += "И опыт, сын ошибок трудных,<br/>";
+        txt += "И гений, Borland Paradox`ов друг,<br/>";
+        txt += "И случай, ... изобретатель...<br/>";
+        txt += "А. С. Пушкин<br/>";
+        //длина в символах отображаемого текста исходное значение
+        var n = 0;
+        //переменная для записи подстроки текста
+        var ref;
+        function writeText(){
+            //переменная временной задержки
+            var time;
+            //подстрока текста записывается в область вывода. Первый аргумент - начальный символ, n- индекс первого, не входящего в строку символа
+            ref.innerHTML = txt.substring(0,n);
+            //если не достигнут конец текста то длинна отображемого текста увеличивается на один символ
+            if (n<txt.length){
+                n++;
+                time = 60;
+            }else{
+                n=0;
+                time = 4000;
+            }
+            //рекурсивный вызов функции с временной задержкой
+            setTimeout(writeText,time);
+        }
+        window.onload = function () {
+            ref = document.getElementById("mytext");
+            writeText();
+        }
+    </script>
+
+    <style type="text/css">
+        #mytext{
+            width: 320px;
+            height: 150px;
+            border: solid;
+            border-color: silver;
+            border-width: 3px;
+            font-family: Times New Roman;
+            font-size: 16pt;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Листинг 9.3</h3>
+    <hr>
+    <br/>
+    <div id="mytext"></div>
+
+    <a href="index.html">На главную</a><br/>
+    <a href="draw.html">Перейти  к рисованию</a><br/>
+    <a href="enot.html">Перейти  к описанию зверей</a><br/>
+    <a href="event.html">Перейти к событию координат мыши</a><br/>
+    <a href="dispatch.html">Перейти к диспетчеризации</a><br/>
+    <a href="calculator.html"><b>КАЛЬКУЛЯТОР</b></a><br/>
+    <a href="koha.html">Перейти к кривой Коха</a><br/>
+    <a href="images.html">Перейти к изображению</a><br/>
+    <a href="watches.html">Перейти к аналоговым часам</a><br/>
+    <a href="keyLogger.html">Перейти к keyLogger</a><br/>
+</body>
+</html>

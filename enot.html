@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Листинг 8.4</title>
+    <script type="text/javascript">
+        var fileNames=["fox.jpg", "raccoon.jpg", "wolf.jpg"];
+        var animals=["Лиса", "Енот", "Волк"];
+        var genders=["АЯ", "ЫЙ", "ЫЙ"];
+        var fox="Рыжая лисья шубка <br>Очень многим нравится<br>И хоть лиса - плутовка<br>Она еще и красавица!";
+        var raccoon="Домашний енот - милашка<br>А еще он большой чистюля<br>Легко постирает рубашку<br>Или помоет катрюлю";
+        var wolf="Он сильный и выносливый,<br>Но скучно одному<br>И волк от одиночества<br>Воет на луну";
+        //массив с текстовыми описаниями зверей
+        var text= [fox, raccoon, wolf];
+        //Путь к файлам изображений
+        var path="images/";
+        //переменный для записи ссылок на объекты элементов
+        var lst,mytext,pict;
+        //поехала загрузка документа обработка события onload
+        window.onload = function(){
+            //объект раскрывающегося списка
+            lst=document.getElementById("mylist");
+            //объект изображения
+            pict=document.getElementById("mypict");
+            //объект текстового блока
+            mytext=document.getElementsByTagName("p")[0];
+
+            //формируем раскрывающийся список select стр 584 Васильев
+            //var option = new Option("Текст", "value");
+            // создаст <option value="value">Текст</option>
+
+            for(var k=0; k<animals.length; k++){
+                lst.options[k]=new Option(animals[k],"Знакомьтесь - это красив" +genders[k] +" " +animals[k].toLowerCase());
+                //options: аргументом методу конструктора передаем название пункта и значение свойства value
+
+            }
+            //обработчик выбора пункта меню выпадающего списка
+            lst.onchange=function () {
+                //ссылка на файл с изображением
+                pict.src=path+fileNames[lst.selectedIndex];// индекс выбранного в данный момент пункта меню в выпадающем списке
+                pict.title=lst.value;
+                //текст в текстовом блоке
+                mytext.innerHTML=text[lst.selectedIndex];
+            }
+            //индекс выбранного пункта в выпадащем списке
+            var i = 1;
+            //выбираем пункт в списке
+            lst.options[i].selected=true;
+            //задается изображение, соотвестввтующее выбранному пункту в списке
+            pict.src=path+fileNames[i];
+            mytext.innerHTML=text[i];
+        }
+    </script>
+
+    <style type="text/css">
+        select {
+            font-family: Times New Roman;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: bold;
+            height: 100%;
+            width: 100%;
+            padding: 1px 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <!--первый столбец внешней таблицы-->
+            <td style="width: 280px;vertical-align: top;border-style: none;">
+                <table style="width: 100%;">
+                    <!--первая строка внутренней таблицы-->
+                    <tr>
+                        <!--единственный столбец-->
+                        <td style="width: 100%;border-style: outset;height: 35px;padding: 5px;">
+                            <select size="1" id="mylist">
+                                <!-- для понимания аргументы конструктоа Options:
+       <option> value="Знакомьтесь - это долбан" +genders[k] +" " +animals[k]">animals[k]</option>-->
+                            </select>
+                        </td>
+                    </tr>
+                    <!--вторая строка внутренней таблицы-->
+                    <tr>
+                        <td style="border-style: outset;height: 110px;background-color: #f0f0f0;padding: 10px;">
+                            <p style="font-size: 12px;font-family: Arial;font-weight: bold;"></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <!--второй столбец внешней таблицы-->
+            <td style="width: 200px;border-style: none;">
+                <img id="mypict" style="width: 185px;height: 185px;border-style: outset;">
+            </td>
+        </tr>
+    </table><br/>
+    <a href="index.html">На главную</a><br/>
+    <a href="draw.html">Перейти  к рисованию</a><br/>
+    <a href="event.html">Перейти к событию координат мыши</a><br/>
+    <a href="dispatch.html">Перейти к диспетчеризации</a><br/>
+    <a href="calculator.html"><b>КАЛЬКУЛЯТОР</b></a><br/>
+    <a href="koha.html">Перейти к кривой Коха</a><br/>
+    <a href="vers.html">Перейти к стихам А. С. Пушкина</a><br/>
+    <a href="images.html">Перейти к изображению</a><br/>
+    <a href="watches.html">Перейти к аналоговым часам</a><br/>
+    <a href="keyLogger.html">Перейти к keyLogger</a><br/>
+</body>
+</html>

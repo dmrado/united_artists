@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Листинг 9.5</title>
+    <script>
+        var cols= 3;
+        var rows = 6;
+        var file = "images/pets.jpg";
+        var R=2;
+        var Cnv,outCnv;
+        var Ctx,outCtx;
+        var mytab;
+        var myimg;
+
+        window.onload = function () {
+            myimg = new Image();
+            myimg.src = file;
+            mytab = document.getElementById("mytable");
+            outCnv = document.getElementById("output");
+            outCtx = outCnv.getContext("2d");
+            Cnv = new Array(rows);
+            Ctx = new Array(rows);
+            //перебор строк в массивах
+            for(var i=0; i<rows; i++){
+                mytab.insertRow(i);//почему здесь скобки круглые - это аргумент
+                Cnv[i]=new Array(cols);
+                Ctx[i]=new Array(cols);
+                //перебор элементов в строке
+                for(var j=0; j<cols; j++){
+                    //добавление в строку таблицы новой ячейки
+                    mytab.rows[i].insertCell(j);//почему здесь скобки круглые
+                    Cnv[i][j]=document.createElement("canvas");
+                    Ctx[i][j]=Cnv[i][j].getContext("2d");
+                    mytab.rows[i].cells[j].appendChild(Cnv[i][j]);
+                    mytab.rows[i].cells[j].onmouseover = function () {
+                        var m,n;
+                        //вычисление индекса строки, в которой находится ячейка
+                        m = this.parentElement.rowIndex;
+                        //вычисление индекса столбца, в котором находится ячейка
+                        n = this.cellIndex;
+                        Cnv[m][n].style.borderColor = "#505050";
+                        outCnv.style.borderColor = "#505050";
+                        outCtx.drawImage(Cnv[m][n],0,0,Cnv[m][n].width,Cnv[m][n].height,0,0,outCnv.width,outCnv.height);
+                    }
+                    //обработчик события перемещения курсора мыши за пределы области ячейки
+                    mytab.rows[i].cells[j].onmouseout =function () {
+                        var cnv;
+                        cnv= this.getElementsByTagName("canvas")[0];
+                        cnv.style.borderColor = "silver";
+                        outCnv.style.borderColor = "silver";
+                        outCtx.clearRect(0,0,outCnv.width,outCnv.height);
+                    }
+                }
+            }
+            //Обработчик загрузки исходгного изображения
+            myimg.onload = function(){
+                var width,height;
+                //вычисление ширины и высоты изображения в ячейке
+                width = Math.floor(this.width/cols);
+                height = Math.floor(this.height/rows);
+                //высота и ширина графической области отдельного фрагмента исходного изображения
+                outCnv.height=Math.round(R*height);
+                outCnv.width=Math.round(R*width);
+                for(var i=0;i<Cnv.length; i++){
+                    for(var j=0; j<Cnv[i].length; j++){
+                        //ширина и высота графической области в ячейке
+                        Cnv[i][j].width = width;
+                        Cnv[i][j].height = height;
+                        Cnv[i][j].style.border = "solid";
+                        Cnv[i][j].style.borderWidth = "3px";
+                        Cnv[i][j].style.borderColor = "silver";
+                        //отображение фрагмента исходного изображения внутри ячейки таблицы
+                        Ctx[i][j].drawImage(this,j*width,i*height,width,height,0,0,width,height)
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        #mytable{
+            padding: 2px;
+            border-style: solid;
+            border-width: 3px;
+            border-color: silver;
+            border-spacing: 0px;
+        }
+        #mytable td{
+            padding: 2px;
+        }
+        #output{
+            border-style: solid;
+            border-color: silver;
+            border-width: 3px;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Листинг 9.5</h3>
+    <hr>
+    <table>
+        <tr>
+            <!--первая ячейка в строке внешней таблицы-->
+            <td style="vertical-align: top;">
+                <!--внутренняя таблица-->
+                <table id="mytable"></table>
+            </td>
+
+            <!--вторая ячейка в строке внешней табицы-->
+            <td style="vertical-align: top;">
+                <canvas id="output"></canvas>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <a href="index.html">На главную</a><br/>
+    <a href="draw.html">Перейти  к рисованию</a><br/>
+    <a href="enot.html">Перейти  к описанию зверей</a><br/>
+    <a href="event.html">Перейти к событию координат мыши</a><br/>
+    <a href="dispatch.html">Перейти к диспетчеризации</a><br/>
+    <a href="calculator.html"><b>КАЛЬКУЛЯТОР</b></a><br/>
+    <a href="koha.html">Перейти к кривой Коха</a><br/>
+    <a href="vers.html">Перейти к стихам А. С. Пушкина</a><br/>
+    <a href="watches.html">Перейти к аналоговым часам</a><br/>
+    <a href="keyLogger.html">Перейти к keyLogger</a><br/>
+</body>
+</html>

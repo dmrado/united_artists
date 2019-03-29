@@ -1,0 +1,37 @@
+.watch{
+    width: 700px;
+    height: 700px;
+    background-color: lightgrey;
+    border: 2px solid black;
+    border-radius: 400px;
+    position: absolute;
+    bottom: 100px; /* Положение от нижнего края */
+    right: 500px;/* Положение от правого края */
+}
+
+.center{
+    width: 20px;
+    height: 20px;
+    background-color: #020953;
+    border: 2px solid black;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 340px; /* Положение от нижнего края */
+    right: 340px;/* Положение от правого края */
+}
+
+
+.minutes {
+    width: 310px;
+    height: 5px;
+    padding: 10px;
+    background-color: blue;
+    border: 2px solid black;
+    transition: all 1s;
+    font-size: 14px;
+    border-radius: 10px;
+    color: yellow;
+    position: relative;
+    bottom: 5px; /* Положение от нижнего края */
+    right: -25px;/* Положение от правого края */
+}

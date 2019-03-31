@@ -4,36 +4,43 @@
     <meta charset="UTF-8">
     <title>Watches</title>
     <link rel="stylesheet" href="css/minutes.css" type="text/css">
-
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
 <div class="watch">
     <div class="center">
-        <div class="minutes">Минутная стрелка</div>
+        <div class="hours"></div>
+        <div class="minutes"></div>
+        <div class="seconds"></div>
     </div>
 </div>
-
 <script>
     $(document).ready(function(){
-        var minutes = $('.minutes');
-        var rotate;
-        $('body').keyup(function (e) {
-            console.log(e);
-            switch (e.key) {
-                case "ArrowUp":
-                    rotate += 6;
-                    break;
-                case "ArrowDown":
-                    rotate -= 6;
-                    break;
-            }
-            alert(e);
-            minutes.css('transform', 'skew(' + rotate + 'deg)');
-        });
-    });
-</script>
-<script src="js/jquery.min.js"></script>
+        var jqMinutes = $('.minutes');
+        var jqSeconds = $('.seconds');
+        var jqHours = $('.hours');
 
+        function drawTime(jqMinutes, rotate) {
+            if(rotate === -90){
+                jqMinutes.css('transition-property', 'none');
+            } else{
+                jqMinutes.css('transition-property', 'all');
+            }
+            jqMinutes.css('transform', 'rotate(' + rotate + 'deg) translate(0, -50%)');
+        }
+        setInterval(function () {
+            var date = new Date();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            var hours = date.getHours();
+
+            drawTime(jqMinutes, minutes * 6 - 90);
+            drawTime(jqSeconds, seconds * 6 - 90);
+            drawTime(jqHours, hours * 30 - 90);
+        }, 1000);
+    });
+
+</script>
 <a href="index.html">На главную</a><br/>
 <a href="draw.html">Перейти  к рисованию</a><br/>
 <a href="enot.html">Перейти  к описанию зверей</a><br/>

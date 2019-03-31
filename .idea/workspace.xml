@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="696abe23-7fa1-4acc-b7dd-77861690651b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/minutes.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/minutes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyLogger.html" beforeDir="false" afterPath="$PROJECT_DIR$/keyLogger.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/watches.html" beforeDir="false" afterPath="$PROJECT_DIR$/watches.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,47 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/watches.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+            <state relative-caret-position="301">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vers.html">
+        <entry file="file://$PROJECT_DIR$/css/minutes.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/keyLogger.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/keyLoggerOutput.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/keyLoggerOutput.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+            <state relative-caret-position="124">
+              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -75,9 +50,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/minutes.css" />
         <option value="$PROJECT_DIR$/js/keyLoggerOutput.js" />
-        <option value="$PROJECT_DIR$/watches.html" />
         <option value="$PROJECT_DIR$/calculator.html" />
         <option value="$PROJECT_DIR$/dispatch.html" />
         <option value="$PROJECT_DIR$/draw.html" />
@@ -89,6 +62,8 @@
         <option value="$PROJECT_DIR$/vers.html" />
         <option value="$PROJECT_DIR$/css/keyLoggerOutput.css" />
         <option value="$PROJECT_DIR$/keyLogger.html" />
+        <option value="$PROJECT_DIR$/css/minutes.css" />
+        <option value="$PROJECT_DIR$/watches.html" />
       </list>
     </option>
   </component>
@@ -96,8 +71,7 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="722" />
-    <option name="width" value="718" />
+    <option name="width" value="519" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -106,6 +80,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -127,7 +102,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -174,16 +148,18 @@
       <workItem from="1553885750470" duration="126000" />
       <workItem from="1553889336323" duration="411000" />
       <workItem from="1553929309231" duration="387000" />
+      <workItem from="1554041046959" duration="4831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38482000" />
+    <option name="totallyTimeSpent" value="43313000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="722" y="0" width="718" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15236686" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.113018595" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -208,13 +184,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/minutes.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/calculator.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -301,27 +270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/watches.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/keyLoggerOutput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/keyLoggerOutput.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -329,10 +277,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/keyLoggerOutput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/keyLogger.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="648">
+          <caret line="24" selection-start-line="24" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1602">
+          <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/minutes.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/watches.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="50" />
         </state>
       </provider>
     </entry>

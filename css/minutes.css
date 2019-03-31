@@ -5,8 +5,8 @@
     border: 2px solid black;
     border-radius: 400px;
     position: absolute;
-    bottom: 100px; /* Положение от нижнего края */
-    right: 500px;/* Положение от правого края */
+    bottom: 60px; /* Положение от нижнего края */
+    right: 450px;/* Положение от правого края */
 }
 
 .center{
@@ -20,18 +20,31 @@
     right: 340px;/* Положение от правого края */
 }
 
-
-.minutes {
-    width: 310px;
-    height: 5px;
-    padding: 10px;
-    background-color: blue;
+.minutes, .hours, .seconds {
     border: 2px solid black;
     transition: all 1s;
-    font-size: 14px;
     border-radius: 10px;
     color: yellow;
-    position: relative;
-    bottom: 5px; /* Положение от нижнего края */
-    right: -25px;/* Положение от правого края */
+    position: absolute;
+    top: 50%; /* Положение от вернего края именно родителя*/
+    left: 50%;/* Положение от левого края  именно родителя*/
+    transform-origin: 0 0;
+}
+
+.hours{
+    width: 190px;
+    height: 32px;
+    background-color: #0d86ff;
+}
+
+.minutes{
+    width: 290px;
+    height: 16px;
+    background-color: #122fff;
+}
+
+.seconds{
+    width: 340px;
+    height: 6px;
+    background-color: #040e88;
 }

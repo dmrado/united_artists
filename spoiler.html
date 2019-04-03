@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spoiler</title>
+        <style type="text/css">
+            /*изначально при загрузке страницы все спойлеры закрыты*/
+            .spoiler_body {
+                display: none;
+                cursor: pointer;
+            }
+        </style>
+        <script src="js/jquery.min.js"></script>
+    </head>
+    <body>
+        <div><!--parent of spoiler_links && spoiler_body-->
+            <a href="#" class="spoiler_links">Спойлер №1</a>
+            <div class="spoiler_body">
+            Текст под спойлером <br/>плавно появляется <br/>и плавно исчезает <br/>при клике по спойлеру
+            </div>
+        </div>
+        <div>
+            <a href="#" class="spoiler_links">Спойлер №2</a>
+            <div class="spoiler_body">
+                А это второй спойлер <br/>и он тоже работает
+            </div>
+        </div>
+
+        <script type="text/javascript"><!--переключение по клику-->
+            $(function(){
+                $('.spoiler_links').click(function () {
+
+                    //первый открылся второй закрылся и наоборот
+                    $("div[class^='spoiler_body']").hide('normal');
+                    //нашли ребенка родителя ссылки - это div - он на одном уровне со ссылкой
+                    $(this).parent().children('div.spoiler_body').toggle('normal');
+                    return(false);
+                });//end click
+            });//end ready
+        </script>
+
+        <input type="button" value="Закрыть все" onclick=$("div[class^='spoiler_body']").hide('normal')>
+        <br>
+        <input type="button" value="Открыть все" onclick=$("div[class^='spoiler_body']").show('normal')>
+        <br>
+        <br>
+
+        <a href="index.html">На главную</a><br/>
+        <a href="draw.html">Перейти  к рисованию</a><br/>
+        <a href="enot.html">Перейти  к описанию зверей</a><br/>
+        <a href="event.html">Перейти к событию координат мыши</a><br/>
+        <a href="dispatch.html">Перейти к диспетчеризации</a><br/>
+        <a href="calculator.html"><b>КАЛЬКУЛЯТОР</b></a><br/>
+        <a href="koha.html">Перейти к кривой Коха</a><br/>
+        <a href="images.html">Перейти к изображению</a><br/>
+        <a href="watches.html">Перейти к аналоговым часам</a><br/>
+        <a href="keyLogger.html">Перейти к keyLogger</a>
+    </body>
+</html>

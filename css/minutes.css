@@ -5,8 +5,8 @@
     border: 2px solid black;
     border-radius: 400px;
     position: absolute;
-    bottom: 60px; /* Положение от нижнего края */
-    right: 450px;/* Положение от правого края */
+    bottom: 0px; /* Положение от нижнего края */
+    right: 350px;/* Положение от правого края */
 }
 
 .center{

@@ -16,7 +16,12 @@
         <div><!--parent of spoiler_links && spoiler_body-->
             <a href="#" class="spoiler_links">Спойлер №1</a>
             <div class="spoiler_body">
-            Текст под спойлером <br/>плавно появляется <br/>и плавно исчезает <br/>при клике по спойлеру
+                <ul>
+                    <li>Текст под спойлером</li>
+                    <li>плавно появляется</li>
+                    <li>и плавно исчезает</li>
+                    <li>при клике по спойлеру</li>
+                </ul>
             </div>
         </div>
         <div>
@@ -31,10 +36,10 @@
                 $('.spoiler_links').click(function () {
 
                     //первый открылся второй закрылся и наоборот
-                    $("div[class^='spoiler_body']").hide('normal');
+                   // $("div.spoiler_body").hide('normal');
                     //нашли ребенка родителя ссылки - это div - он на одном уровне со ссылкой
                     $(this).parent().children('div.spoiler_body').toggle('normal');
-                    return(false);
+                    return false;
                 });//end click
             });//end ready
         </script>
@@ -54,6 +59,8 @@
         <a href="koha.html">Перейти к кривой Коха</a><br/>
         <a href="images.html">Перейти к изображению</a><br/>
         <a href="watches.html">Перейти к аналоговым часам</a><br/>
-        <a href="keyLogger.html">Перейти к keyLogger</a>
+        <a href="keyLogger.html">Перейти к keyLogger</a><br/>
+        <a href="wiki/index.html">Перейти к Spoiler</a><br/><br/>
+        <a href="wiki/index.html">Перейти к Wiki</a><br/>
     </body>
 </html>

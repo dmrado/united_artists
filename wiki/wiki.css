@@ -1,0 +1,8 @@
+#output >div >a{
+    width: 25%;
+}
+
+
+#output > div{
+    display: flex;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>request to Wiki</title>
+
+</head>
+<body>
+    <div>
+        <input type="text" id="searchEl" title="Please, input your request here"/><br><br>
+        <input type="button" id="btnEl" value="Get request"/>
+    </div><br>
+        <div id="output">The place for the output is below</div><br><br>
+
+    <script type="text/javascript">
+    var searchEl = document.getElementById("searchEl");
+    var btnEl = document.getElementById("btnEl");
+
+    btnEl.addEventListener("click", function(){
+        var myAjax = new XMLHttpRequest();
+        var request = searchEl.value;
+
+        if(request === ""){
+            alert("just put your request");
+            return false;
+        }
+           // alert(valEl);
+            myAjax.open("GET", "proxy.php",//ошибка здесь не правильно написан URL
+                //"https://ru.wikipedia.org/w/api.php?action=opensearch&search="+valEl+"&limit=10&format=json" ,
+                true);
+        myAjax.send();
+
+            myAjax.addEventListener("readystatechange", function(evt){
+                if((evt.readyState === 4)&&(evt.status === 200)){
+                    var requestedEl = evt.responseText;
+                    evt.preventDefault();
+                    var output = document.getElementById("output");
+                    output.append(requestedEl);
+                }
+            });
+    });
+    </script>
+</body>
+</html>

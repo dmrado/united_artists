@@ -5,7 +5,7 @@ var output = $('#output');
 searchEl.click(function () {
     var request = requestEl.val();
 
-    if(request ==""){
+    if(request ===""){
         alert("Все же введите свой запрос.");
         return false;
     }

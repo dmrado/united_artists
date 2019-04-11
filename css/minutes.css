@@ -1,23 +1,23 @@
 .watch{
-    width: 700px;
-    height: 700px;
+    width: 520px;
+    height: 520px;
     background-color: lightgrey;
     border: 2px solid black;
     border-radius: 400px;
     position: absolute;
-    bottom: 0px; /* Положение от нижнего края */
-    right: 350px;/* Положение от правого края */
+    bottom: 85px; /* Положение от нижнего края */
+    right: 400px;/* Положение от правого края */
 }
 
 .center{
     width: 20px;
-    height: 20px;
+    height: 22px;
     background-color: #020953;
     border: 2px solid black;
     border-radius: 100px;
     position: absolute;
-    bottom: 340px; /* Положение от нижнего края */
-    right: 340px;/* Положение от правого края */
+    bottom: 290px; /* Положение от нижнего края */
+    right: 225px;/* Положение от правого края */
 }
 
 .minutes, .hours, .seconds {
@@ -33,7 +33,7 @@
 
 .hours{
     width: 190px;
-    height: 32px;
+    height: 22px;
     background-color: #0d86ff;
 }
 

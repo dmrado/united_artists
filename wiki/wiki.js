@@ -7,7 +7,7 @@ searchEl.click(function () {
 
     if(request ===""){
         alert("Все же введите свой запрос.");
-        return false;
+        return false;//cnh 254 "JS и jQ"
     }
     //var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+request+"&limit=10&format=json";
     $.ajax({
